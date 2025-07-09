@@ -8,3 +8,16 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+ .card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+}
+
+.btn-danger {
+  margin-top: 20px;
+}

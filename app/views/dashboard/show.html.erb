@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-header">
+      <h2>Your Dashboard</h2>
+    </div>
+    <div class="card-body">
+      <p><strong>Username:</strong> <%= @user.username %></p>
+      <p><strong>Email:</strong> <%= @user.email %></p>
+      <p><strong>Account created:</strong> <%= @user.created_at.to_formatted_s(:long) %></p>
+
+      <div class="mt-4">
+        <%= button_to "Delete My Account", dashboard_path, 
+                      method: :delete, 
+                      data: { confirm: "Are you sure? This cannot be undone." },
+                      class: "btn btn-danger" %>
+      </div>
+    </div>
+  </div>
+</div>
