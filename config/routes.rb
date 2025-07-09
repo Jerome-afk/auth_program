@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  # get "home/index"
+  get "dashboard/show"
+  get "dashboard/remove"
   root "home#index"
 
   get "signup", to: "users#new"
@@ -9,12 +10,9 @@ Rails.application.routes.draw do
   post "login", to: "sessions#create"
   delete "logout", to: "sessions#destroy"
 
+  get "dashboard", to: "dashboard#show"
+  delete "dashboard", to: "dashboard#remove"
 
-  # get "users/new"
-  # get "users/create"
-  # get "sessions/new"
-  # get "sessions/create
-  # get "sessions/destroy"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
